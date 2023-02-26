@@ -1,0 +1,163 @@
+/* definindo variáveis para cores */
+:root{
+    --primary: #34375a;
+    --secondary: #00ABBD;
+    /* tertiary não é um padrão do Bootstrap, mas pode ser adicionado! */
+    --tertiary: #f4bf87;
+    --success: #0099DD;
+    --info: #f4f1ed;
+    --warning: #FF9933;
+    --danger: #E3371E;
+    --height:600px;
+}
+/* sobrescrevendo classes padrão do Bootstrap */
+/* a marcação !important dá um peso maior a regra, sobrescrevendo regras prévias */
+.bg-primary, .btn-primary{
+    background-color: var(--primary) !important;
+}
+.bg-secondary, .btn-secondary{
+    background-color: var(--secondary) !important;
+}
+.bg-tertiary, .btn-tertiary{
+    background-color: var(--tertiary) !important;
+}
+/* .bg-success, .btn-success{
+    background-color: var(--success) !important;
+} */
+.bg-info, .btn-info{
+    background-color: var(--info) !important;
+}
+.bg-warning, .btn-warning{
+    background-color: var(--warning) !important;
+}
+.bg-danger .btn-danger{
+    background-color: var(--danger) !important;
+}
+
+.nav-link {
+    color: var(--primary) !important ;
+}
+.nav-link:hover{
+    color: var(--info) !important ; 
+}
+
+.text-info{
+    color: var(--info) !important ; 
+}
+.bg-gray-100{
+    opacity: 0.7;
+    background-color:var(--primary) !important ;
+}
+.btn:hover{
+    color: var(--info) !important ; 
+}
+
+.text-tertiary {
+    color: var(--tertiary) !important ; 
+}
+
+.container-video {
+    background-color: var(--primary) !important;
+    color: var(--tertiary) !important ; 
+    /* height: var(--height); */
+}
+
+.container-aulas {
+    background-color: var(--info) !important;
+    color: var(--info) !important; 
+    overflow:auto;
+    /* height: var(--height); */
+}
+
+video::-internal-media-controls-download-button {
+    display:none;
+}
+.btn-outline-info{
+    color: var(--info) !important; 
+}
+.inicial{
+    background-color: var(--info) !important;
+    color: var(--tertiary) !important ; 
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--primary) !important;
+    background-repeat: repeat;
+    width: 100%;
+    height: 100%;
+} 
+
+.scroll {
+    max-height: 800px;
+    overflow-y: auto;
+}
+
+@media (max-width: 767.98px) {
+    .display-mobile {
+        display: block;
+    }
+    .display-desktop {
+        display: none;
+    }
+}
+
+@media (min-width: 767.99px) { 
+    .display-mobile {
+        display: none;
+    }
+    .display-desktop {
+        display: block;
+    }
+ }
+
+ .fixarRodape {
+    bottom: 5;
+    position: fixed;
+    width: 90%;
+    text-align: center;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.wraper {
+    height: auto;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    overflow: hidden;
+}
+.scroller {
+    display: flex;
+    width: 100%;
+    animation: slidy 6000ms infinite;
+}
+.wraper .scroller img {
+    min-width: calc(100% / 3);
+    flex: 1;
+    padding: 0 .5rem;
+}
+@keyframes slidy {
+   0%{margin-left:0%;}
+  20%{margin-left:0%;}
+
+  25%{margin-left:-100%;}
+  45%{margin-left:-100%;}
+
+  50%{margin-left:-200%;}
+  70%{margin-left:-200%;}
+
+  75%{margin-left:-100%;}
+  95%{margin-left:-100%;}
+
+ 100%{margin-left:0%;}
+}
