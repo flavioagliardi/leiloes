@@ -23,4 +23,5 @@ Auth::routes();
 Route::get('/', App\Http\Livewire\Home::class)->name('home');
 
 Route::get('/cliente', \App\Http\Livewire\CadastroCliente::class)->name('cliente');
+Route::post('/cliente', \App\Http\Livewire\CadastroCliente::class)->name('cliente');
 Route::get('/quem-somos', \App\Http\Livewire\QuemSomos::class)->name('quem-somos');
