@@ -92,7 +92,7 @@
                                 <div class="row">
                                     <div class="col-lg-6 mt-2">  
                                         <label for="inputCpf" class="form-label">CPF*</label>
-                                        <input type="text" class="{{ $errors->has('cpf') ? 'form-control is-invalid' : 'form-control'}}"  wire:model="cpf" keypress="validaCpf()">
+                                        <input type="text" class="{{ $errors->has('cpf') ? 'form-control is-invalid' : 'form-control'}}" id="cpf" wire:model="cpf">
                                         @if($errors->has('cpf'))
                                             <div class="invalid-feedback">
                                                 {{ $errors->first('cpf') }}

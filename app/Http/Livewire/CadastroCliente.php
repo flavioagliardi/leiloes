@@ -45,6 +45,34 @@ class CadastroCliente extends Component
         dd($cliente->nome);
     }
 
+    public function updated($field)
+   	{
+        // mascara de cpf
+   		if ($field == 'cpf') {
+            $inputLength = strlen($this->cpf);
+                
+            if ($inputLength === 3 | $inputLength === 7) {
+                $this->cpf = $this->cpf . '.';
+            }
+            if ($inputLength === 11) {
+                $this->cpf = $this->cpf . '-';
+            }
+   		}
+
+        // mascara de cnpj
+   		if ($field == 'cnpj') {
+            $inputLength = strlen($this->cnpj);
+                
+            if ($inputLength === 3 | $inputLength === 7) {
+                $this->cnpj = $this->cnpj . '.';
+            }
+            if ($inputLength === 11) {
+                $this->cnpj = $this->cnpj . '-';
+            }
+        }
+
+    }
+
     function validaCpf() {
 
         if (! $this->cpf) {

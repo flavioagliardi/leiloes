@@ -13,14 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 // Route::get('/', App\Http\Livewire\Welcome::class)->name('site');
 
 Auth::routes();
 
-Route::get('/', App\Http\Livewire\Home::class)->name('home');
+Route::get('/home', App\Http\Livewire\Home::class)->name('home');
 
 Route::get('/cliente', \App\Http\Livewire\CadastroCliente::class)->name('cliente');
 Route::post('/cliente', \App\Http\Livewire\CadastroCliente::class)->name('cliente');
