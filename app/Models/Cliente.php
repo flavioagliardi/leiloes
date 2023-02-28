@@ -19,9 +19,28 @@ class Cliente extends Model
             'email' => 'required|unique:cadastro,email,'.$this->id.'|email',
             'cpf' => 'required|unique:cadastro,cpf,'.$this->id.'|cpf',
             'rg' => 'required',
-            // 'sexo' => 'required',
-            // 'nascimento' => 'required',
-            // 'telefone' => 'required',
+            'sexo' => 'required',
+            'nascimento' => 'required',
+            'telefone' => 'required',
+            'cep' => 'required',
+            'logradouro' => 'required',
+            'numero' => 'required',
+            'bairro' => 'required',
+            'cidade' => 'required',
+            'uf' => 'required',
+            'login' => 'required|unique:cadastro,login,'.$this->id,
+            'senha' => 'required',
+            'confirmacao' => 'required',
+            'termo' => 'required',
+        ];
+    }
+    public function rulesPj() {
+        return [
+            'nome' => 'required',
+            'email' => 'required|unique:cadastro,email,'.$this->id.'|email',
+            'cnpj' => 'required|unique:cadastro,cnpj,'.$this->id.'|cnpj',
+            'ie' => 'required',
+            'telefone' => 'required',
             // 'cep' => 'required',
             // 'logradouro' => 'required',
             // 'numero' => 'required',
@@ -31,25 +50,6 @@ class Cliente extends Model
             // 'login' => 'unique:cadastro,login,'.$this->id,
             // 'senha' => 'required',
             // 'confirmacao' => 'required',
-            // 'termo' => 'required',
-        ];
-    }
-    public function rulesPj() {
-        return [
-            'nome' => 'required',
-            'email' => 'unique:cadastro,email,'.$this->id.'|email',
-            'cnpj' => 'unique:cadastro,cnpj,'.$this->id.'|cnpj',
-            'ie' => 'required',
-            'telefone' => 'required',
-            'cep' => 'required',
-            'logradouro' => 'required',
-            'numero' => 'required',
-            'bairro' => 'required',
-            'cidade' => 'required',
-            'uf' => 'required',
-            'login' => 'unique:cadastro,login,'.$this->id,
-            'senha' => 'required',
-            'confirmacao' => 'required',
         ];
     }
 

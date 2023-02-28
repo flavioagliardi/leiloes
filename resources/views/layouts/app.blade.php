@@ -30,8 +30,8 @@
     
     <livewire:scripts />
 
-    <script type="module">
+    {{-- <script type="module">
         import hotwiredturbo from 'https://cdn.skypack.dev/@hotwired/turbo'
-    </script>
+    </script> --}}
 </body>
 </html>

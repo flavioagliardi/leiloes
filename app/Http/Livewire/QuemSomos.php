@@ -10,4 +10,9 @@ class QuemSomos extends Component
     {
         return view('livewire.quem-somos');
     }
+
+    public function cadastrar()
+    {
+        dd('cadastrar');
+    }
 }
